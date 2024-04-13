@@ -6,11 +6,11 @@ const MeetingForm = ({setName, meet, date, openModal, setModal }) => {
 
 
     return (
-        <div className={`w-[68%] absolute z-[100] overflow-y-scroll left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 my-auto h-[75%] bg-white rounded-md flex ${openModal ? 'flex' : 'hidden'}`}>
+        <div className={`md:w-[68%] w-full absolute z-[100] overflow-y-scroll left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 my-auto h-[75%] bg-white rounded-md flex md:flex-row flex-col ${openModal ? 'flex' : 'hidden'}`}>
             <div className='basis-[44%] h-[210%] border-r-[0.7px] border-gray-300 relative'>
                 <div onClick={() => setModal('meetingModal')} className='absolute p-1 top-6 left-7 cursor-pointer rounded-full border border-gray-300'><RiArrowLeftLine color='blue' size={20} /></div>
                 <div className='w-full flex justify-center p-9 border-b-[0.7px] border-gray-300'>
-                    <img className='h-32' src="./logo.png" alt="" />
+                    <img className='md:h-32 h-12' src="./logo.png" alt="" />
                 </div>
                 <div className='flex flex-col gap-3 py-6 px-4 ml-6'>
                     <p className='text-2xl font-semibold text-gray-900'>Fibery Demo</p>
@@ -24,9 +24,9 @@ const MeetingForm = ({setName, meet, date, openModal, setModal }) => {
             <div className='basis-[70%] h-fit pb-6 py-4 pl-8 flex flex-col gap-1'>
                 <p className='text-lg font-semibold mt-2'>Enter Details</p>
                 <label className='font-semibold text-sm mt-3' htmlFor="name">Name*</label>
-                <input onChange={(e) => setName(e.target.value)} type="text" className='w-[70%] mt-1 h-[45px] px-4 rounded-md focus:outline-none border-[1px] border-gray-400 focus:border-blue-500 focus:border-2' />
+                <input onChange={(e) => setName(e.target.value)} type="text" className='md:w-[70%] w-[90%] mt-1 h-[45px] px-4 rounded-md focus:outline-none border-[1px] border-gray-400 focus:border-blue-500 focus:border-2' />
                 <label className='font-semibold text-sm mt-4' htmlFor="name">Email*</label>
-                <input type="text" className='w-[70%] mt-1 h-[45px] px-4 rounded-md focus:outline-none border-[1px] border-gray-400 focus:border-blue-500 focus:border-2' />
+                <input type="text" className='md:w-[70%] w-[90%] mt-1 h-[45px] px-4 rounded-md focus:outline-none border-[1px] border-gray-400 focus:border-blue-500 focus:border-2' />
 
                 <p className='mt-2 px-3 text-[12px] w-[100px] font-medium py-2 border border-blue-500 rounded-3xl text-blue-500'>Add Guests</p>
                 <div className='mt-5 text-[15px]'>
@@ -74,10 +74,10 @@ const MeetingForm = ({setName, meet, date, openModal, setModal }) => {
                 </div>
 
                 <div className='flex flex-col mt-2'>
-                    <label className='font-semibold text-sm w-[70%] mt-3' htmlFor="name">Please, share anything that will help prepare for our meeting.</label>
-                    <textarea rows={3} type="text" className='w-[70%] mt-2 px-3 text-sm py-2 rounded-md focus:outline-none border-[1px] border-gray-400 focus:border-blue-500 focus:border-2' />
-                    <label className='font-semibold w-[70%] text-sm mt-4' htmlFor="name">Please, share with us the name of your Fibery workspace (if any)</label>
-                    <input type="text" className='w-[70%] mt-2 h-[45px] px-4 rounded-md focus:outline-none border-[1px] border-gray-400 focus:border-blue-500 focus:border-2' />
+                    <label className='font-semibold text-sm md:w-[70%] w-[90%] mt-3' htmlFor="name">Please, share anything that will help prepare for our meeting.</label>
+                    <textarea rows={3} type="text" className='md:w-[70%] w-[90%] mt-2 px-3 text-sm py-2 rounded-md focus:outline-none border-[1px] border-gray-400 focus:border-blue-500 focus:border-2' />
+                    <label className='font-semibold md:w-[70%] w-[90%] text-sm mt-4' htmlFor="name">Please, share with us the name of your Fibery workspace (if any)</label>
+                    <input type="text" className='md:w-[70%] w-[90%] mt-2 h-[45px] px-4 rounded-md focus:outline-none border-[1px] border-gray-400 focus:border-blue-500 focus:border-2' />
                 </div>
 
                 <p className='w-[80%] mt-6 text-sm'>By proceeding, you confirm that you have read and agree to <span className='text-blue-600'>Calendly's Terms of Use</span> and <span className='text-blue-600'>Privacy Notice.</span></p>

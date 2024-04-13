@@ -1,5 +1,5 @@
 const priceBox = (subs, price, days, moreLines, hover) => {
-    return <div className={`basis-1/2 ${hover === 'green' ? 'hover:bg-[#BDF6B4]' : 'hover:bg-[#FFC1B4]'} transition-all flex gap-12 py-16 px-11 rounded-md`}>
+    return <div className={`basis-1/2 ${hover === 'green' ? 'hover:bg-[#BDF6B4]' : 'hover:bg-[#FFC1B4]'} transition-all flex md:flex-row flex-col items-center md:items-start gap-12 py-16 px-11 rounded-md`}>
         <div className='flex flex-col gap-3'>
             <p className='text-3xl font-semibold text-gray-800'>{subs}</p>
             <div className='flex gap-3'>
@@ -13,10 +13,10 @@ const priceBox = (subs, price, days, moreLines, hover) => {
             <p>Read-only users: Unlimited</p>
             {moreLines &&
                 <>
-                <p>Group permissions,</p>
-                <p>SAML + SSO,</p>
-                <p>No Fibery branding on</p>
-                <p>forms, Extra-caring support</p>
+                    <p>Group permissions,</p>
+                    <p>SAML + SSO,</p>
+                    <p>No Fibery branding on</p>
+                    <p>forms, Extra-caring support</p>
                 </>
             }
         </div>

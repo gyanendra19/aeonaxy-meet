@@ -39,28 +39,28 @@ const LandingPage = () => {
                             setModal={setModal} />
             }
 
-            <div className='w-11/12 mx-auto py-7'>
+            <div className='w-11/12 mx-auto md:py-7 py-4'>
                 <div className='flex gap-14 items-center justify-between'>
                     <div className='flex gap-14 mt-2 tracking-wide items-center relative'>
                         <img className='absolute h-5 left-20 -top-2' src="./logo.png" alt="" />
                         <p className='text-2xl font-medium'>Fibery</p>
-                        <p className='text-md font-bold flex gap-1 items-center'>Solutions <span><RiArrowDownSLine color='gray' /></span></p>
-                        <p className='text-md font-bold flex gap-1 items-center'>Product <span><RiArrowDownSLine color='gray' /></span></p>
-                        <p className='text-md font-bold flex gap-1 items-center'>Resources <span><RiArrowDownSLine color='gray' /></span></p>
-                        <p className='text-md font-bold flex gap-1 items-center'>Pricing</p>
+                        <p className='text-md hidden md:flex font-bold gap-1 items-center'>Solutions <span><RiArrowDownSLine color='gray' /></span></p>
+                        <p className='text-md hidden md:flex font-bold gap-1 items-center'>Product <span><RiArrowDownSLine color='gray' /></span></p>
+                        <p className='text-md hidden md:flex font-bold gap-1 items-center'>Resources <span><RiArrowDownSLine color='gray' /></span></p>
+                        <p className='text-md hidden md:flex font-bold gap-1 items-center'>Pricing</p>
                     </div>
 
                     <div className='flex gap-6 items-center'>
-                        <p>Log in</p>
-                        <button onClick={() => setOpenModal(true)} className='px-6 rounded-sm py-2 border-[2.5px] border-black text-lg font-semibold'>Get a demo</button>
-                        <button className='px-6 rounded-sm bg-black border-[2.5px] border-black text-white py-2 text-lg font-semibold opacity-85'>Try for free</button>
+                        <p className='hidden'>Log in</p>
+                        <button onClick={() => setOpenModal(true)} className='md:px-6 px-2 rounded-sm py-2 border-[2.5px] border-black md:text-lg text-sm font-semibold'>Get a demo</button>
+                        <button className='px-6 rounded-sm bg-black border-[2.5px] border-black text-white py-2 md:text-lg text-sm font-semibold opacity-85 hidden'>Try for free</button>
                     </div>
                 </div>
 
                 <div className='pt-28 py-20 w-[88%] mx-auto'>
-                    <div className='w-full flex items-center justify-between'>
+                    <div className='w-full flex md:flex-row flex-col gap-4 md:items-center justify-between'>
                         <div className='flex flex-col gap-2'>
-                            <p className='text-8xl'>Pricing</p>
+                            <p className='md:text-8xl text-5xl'>Pricing</p>
                             <p className='text-xl text-gray-900'>Start your 14-day free trial. No CC required.</p>
                         </div>
 
@@ -72,7 +72,7 @@ const LandingPage = () => {
                 </div>
 
                 <div className='w-[90%] mx-auto'>
-                    <div className='flex justify-between'>
+                    <div className='flex md:flex-row flex-col justify-between'>
                         {priceBox('Standard', '$10', '90 Days', false, 'green')}
                         {priceBox('Pro', '$17', 'Unlimited', true, 'red')}
                     </div>

@@ -8,20 +8,19 @@ const MeetingModal = ({setMeet, meet, date, setDate, openModal, setModal }) => {
     const timeBox = (time) => {
         return meet === time ? (
             <div className='flex gap-1'>
-                <button className='w-1/2 py-3 transition-all text-white font-semibold bg-gray-600 rounded-md mt-3 width-animate'>{meet}</button>
-                <button onClick={() => setModal('meetingForm')} className='w-1/2 py-3 transition-all width-animate text-white font-semibold bg-blue-600 rounded-md mt-3'>NEXT</button>
+                <button className='w-1/2 py-3 text-sm ml-2 md:ml-0 px-3 md:px-0  md:text-md transition-all text-white font-semibold bg-gray-600 rounded-md mt-3 width-animate'>{meet}</button>
+                <button onClick={() => setModal('meetingForm')} className='w-1/2 px-3 md:px-0 py-3 transition-all width-animate text-white font-semibold bg-blue-600 rounded-md mt-3'>NEXT</button>
             </div>
         ) : (
-            <button onClick={() => setMeet(time)} className='px-5 py-3 rounded-[4px] mt-3 border border-blue-500 text-blue-700 font-bold hover:border-blue-700 hover:border-2'>{time}</button>
+            <button onClick={() => setMeet(time)} className='md:px-5 py-2 ml-2 md:ml-0 px-5 md:py-3 rounded-[4px] mt-3 border border-blue-500 text-blue-700 font-bold hover:border-blue-700 hover:border-2'>{time}</button>
         )
     }
-    console.log(showTimes);
 
     return (
-        <div className={`w-[64%] absolute z-[100] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 my-auto h-[75%] bg-white justify-evenly rounded-md flex ${openModal ? 'flex' : 'hidden'}`}>
-            <div className={` border-r-[0.7px] border-gray-300 ${showTimes ? 'basis-[35%]' : 'basis-[45%]'}`}>
+        <div className={`md:w-[64%] w-full absolute z-[100] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 my-auto h-[75%] bg-white justify-evenly rounded-md flex md:flex-row flex-col ${openModal ? 'flex' : 'hidden'}`}>
+            <div className={` border-r-[0.7px] border-gray-300 ${showTimes ? 'md:basis-[35%]' : 'md:basis-[45%]'}`}>
                 <div className='w-full flex justify-center p-9 border-b-[0.7px] border-gray-300'>
-                    <img className='h-32' src="./logo.png" alt="" />
+                    <img className='md:h-32 h-12' src="./logo.png" alt="" />
                 </div>
                 <div className='flex flex-col gap-6 py-6 px-4 ml-6'>
                     <p className='text-2xl font-semibold text-gray-900'>Fibery Demo</p>
@@ -30,7 +29,7 @@ const MeetingModal = ({setMeet, meet, date, setDate, openModal, setModal }) => {
                 </div>
             </div>
 
-            <div className={` justify-between py-8 pl-8 pr-8 ${showTimes ? 'flex basis-[70%]' : 'basis-[50%]'}`}>
+            <div className={`md:flex-row flex-col md:justify-between md:py-8 pl-8 pr-8 ${showTimes ? 'flex basis-[70%]' : 'basis-[50%]'}`}>
                 <div className='flex flex-col basis-[55%]'>
                     <p className='font-semibold tracking-wider text-lg ml-5'>Select a Date & Time</p>
                     <div className='w-[70%] mt-7 flex ml-14 items-center justify-between'>
@@ -49,8 +48,8 @@ const MeetingModal = ({setMeet, meet, date, setDate, openModal, setModal }) => {
                     </div>
                 </div>
 
-                <div className={`flex-col basis-[35%] mt-16 overflow-y-scroll scrollbar ${showTimes ? 'flex' : 'hidden'}`}>
-                    <p className='text-md mb-7 text-center font-medium text-gray-500'>April {date}</p>
+                <div className={`md:flex-col items-center whitespace-nowrap flex-row md:basis-[35%] md:mt-16 mt-6 overflow-x-scroll md:overflow-y-scroll scrollbar ${showTimes ? 'flex' : 'hidden'}`}>
+                    <p className='text-md mb-7 mt-10 md:mt-0 text-center font-medium text-gray-500'>April {date}</p>
                     {timeBox('1:30 PM')}
                     {timeBox('2:30 PM')}
                     {timeBox('3:00 PM')}
