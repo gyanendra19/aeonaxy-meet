@@ -29,7 +29,7 @@ const MeetingModal = ({setMeet, meet, date, setDate, openModal, setModal }) => {
                 </div>
             </div>
 
-            <div className={`md:flex-row flex-col md:justify-between md:py-8 pl-8 pr-8 ${showTimes ? 'flex basis-[70%]' : 'basis-[50%]'}`}>
+            <div className={`md:flex-row flex-col md:justify-between md:py-8 md:pl-8 md:pr-8 pl-2 pr-4 ${showTimes ? 'flex basis-[70%]' : 'basis-[50%]'}`}>
                 <div className='flex flex-col basis-[55%]'>
                     <p className='font-semibold tracking-wider text-lg ml-5'>Select a Date & Time</p>
                     <div className='w-[70%] mt-7 flex ml-14 items-center justify-between'>
