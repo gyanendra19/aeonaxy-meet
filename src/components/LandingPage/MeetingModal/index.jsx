@@ -8,11 +8,11 @@ const MeetingModal = ({setMeet, meet, date, setDate, openModal, setModal }) => {
     const timeBox = (time) => {
         return meet === time ? (
             <div className='flex gap-1'>
-                <button className='w-1/2 py-3 text-sm ml-2 md:ml-0 px-3 md:px-0  md:text-md transition-all text-white font-semibold bg-gray-600 rounded-md mt-3 width-animate'>{meet}</button>
-                <button onClick={() => setModal('meetingForm')} className='w-1/2 px-3 md:px-0 py-3 transition-all width-animate text-white font-semibold bg-blue-600 rounded-md mt-3'>NEXT</button>
+                <button className='w-1/2 py-3 text-sm ml-2 md:ml-0 px-3 md:px-3 transition-all text-white font-semibold bg-gray-600 rounded-md mt-3 width-animate'>{meet}</button>
+                <button onClick={() => setModal('meetingForm')} className='w-1/2 px-3 md:px-3 py-3 transition-all width-animate text-white font-semibold bg-blue-600 rounded-md mt-3'>NEXT</button>
             </div>
         ) : (
-            <button onClick={() => setMeet(time)} className='md:px-5 py-2 ml-2 md:ml-0 px-5 md:py-3 rounded-[4px] mt-3 border border-blue-500 text-blue-700 font-bold hover:border-blue-700 hover:border-2'>{time}</button>
+            <button onClick={() => setMeet(time)} className='md:px-10 py-2 ml-2 md:ml-0 px-5 md:py-3 rounded-[4px] mt-3 border border-blue-500 text-blue-700 font-bold hover:border-blue-700 hover:border-2'>{time}</button>
         )
     }
 
