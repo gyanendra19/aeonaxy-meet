@@ -12,7 +12,7 @@ const MeetingForm = ({setName, meet, date, openModal, setModal }) => {
                 <div className='w-full flex justify-center p-9 border-b-[0.7px] border-gray-300'>
                     <img className='md:h-32 h-12' src="./logo.png" alt="" />
                 </div>
-                <div className='flex flex-col gap-3 py-6 px-4 ml-6'>
+                <div className='flex flex-col gap-3 py-6 px-4 md:ml-6 ml-2'>
                     <p className='text-2xl font-semibold text-gray-900'>Fibery Demo</p>
                     <p className='text-gray-500 flex gap-2 font-medium'><RiTimeLine size={20} color='gray' />45 min</p>
                     <p className='text-gray-500 flex gap-2 items-center font-medium w-[90%]'><RiCalendarLine size={28} color='gray' />{`${meet}`} - {`${calcTime(meet)[0]}:${calcTime(meet)[1]}`} PM, Monday, April {date}, 2024</p>
