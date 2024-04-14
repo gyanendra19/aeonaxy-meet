@@ -5,7 +5,7 @@ import calcTime from '../../../utils/calcTime'
 const SchedulePage = ({meet, date, name, openModal}) => {
     return (
             <div className={`md:w-[64%] absolute z-[100] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 my-auto md:h-[80%] h-fit bg-white rounded-md md:flex-row flex-col w-[95%] ${openModal ? 'flex' : 'hidden'}`}>
-                <div className='md:w-1/2 w-90% flex flex-col items-center mx-auto py-8 h-full'>
+                <div className='md:w-1/2 w-[90%] flex flex-col items-center mx-auto py-8 h-full'>
                     <img className='h-14 rounded-full object-fill' src="./monica.jpg" alt="" />
                     <p className='flex items-center gap-1 mt-4'><RiCheckboxCircleFill size={18} color='darkgreen' /> <span className='text-xl font-semibold tracking-wide'>You are Scheduled</span></p>
                     <p className='mt-4 text-sm text-center'>A calendar invitation has been sent to your email address</p>
@@ -18,9 +18,9 @@ const SchedulePage = ({meet, date, name, openModal}) => {
                     </div>
 
                     <div className='pt-6 border-t-[0.6px] border-gray-400 w-full'>
-                        <p className='text-sm font-semibold'>Schedule your own meeting with Calendly for free</p>
-                        <p className='text-sm mt-2'>Eliminate the back-and-forth email for finding time.</p>
-                        <div className='flex md:flex-row flex-col items-center mt-2 gap-2'>
+                        <p className='text-sm ml-4 md:ml-0 w-[80%] md:w-full font-semibold'>Schedule your own meeting with Calendly for free</p>
+                        <p className='text-sm ml-4 md:ml-0 w-[80%] md:w-full mt-2'>Eliminate the back-and-forth email for finding time.</p>
+                        <div className='flex md:flex-row flex-col items-center mt-3 gap-2'>
                             <button className='px-6 py-2 flex items-center border-[1px] rounded-3xl border-black gap-2'>
                             <img className='h-5' src="./google.png" alt="" />    
                             <span className='text-[12px]'>Sign up with Google</span></button>

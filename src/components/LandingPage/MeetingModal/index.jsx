@@ -22,20 +22,20 @@ const MeetingModal = ({setMeet, meet, date, setDate, openModal, setModal }) => {
                 <div className='w-full flex justify-center p-9 border-b-[0.7px] border-gray-300'>
                     <img className='md:h-32 h-12' src="./logo.png" alt="" />
                 </div>
-                <div className='flex flex-col gap-6 py-6 px-4 ml-6'>
+                <div className='flex flex-col gap-6 py-6 px-4 md:ml-6 ml-2'>
                     <p className='text-2xl font-semibold text-gray-900'>Fibery Demo</p>
                     <p className='flex gap-2 text-gray-500 font-medium'><RiTimeLine />45 min</p>
                     <p className='text-sm tracking-wide leading-6  text-gray-700'>Book a meeting with a product expert. We've helped hundreds of companies overcome product management challenges. </p>
                 </div>
             </div>
 
-            <div className={`md:flex-row flex-col md:justify-between md:py-8 md:pl-8 md:pr-8 pr-4 ${showTimes ? 'flex basis-[70%]' : 'basis-[50%]'}`}>
+            <div className={`md:flex-row flex-col md:justify-between md:py-8 md:pl-8 md:pr-8 pl-2 pr-4 ${showTimes ? 'flex basis-[70%]' : 'basis-[50%]'}`}>
                 <div className='flex flex-col basis-[55%]'>
                     <p className='font-semibold tracking-wider text-lg ml-5'>Select a Date & Time</p>
                     <div className='w-[70%] mt-7 flex ml-14 items-center justify-between'>
                         <span><RiArrowLeftSLine /></span>
                         <p>April 2024</p>
-                        <span className='text-[#0060e6] bg-blue-200 rounded-full font-semibold w-9 h-9 flex items-center justify-center'><RiArrowRightSLine /></span>
+                        <span><RiArrowRightSLine /></span>
                     </div>
                     <Calendar
                     date = {date}

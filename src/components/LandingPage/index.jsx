@@ -51,9 +51,7 @@ const LandingPage = () => {
                     </div>
 
                     <div className='flex gap-6 items-center'>
-                        <p className='hidden'>Log in</p>
                         <button onClick={() => setOpenModal(true)} className='md:px-6 px-2 rounded-sm py-2 border-[2.5px] border-black md:text-lg text-sm font-semibold'>Get a demo</button>
-                        <button className='px-6 rounded-sm bg-black border-[2.5px] border-black text-white py-2 md:text-lg text-sm font-semibold opacity-85 hidden'>Try for free</button>
                     </div>
                 </div>
 
