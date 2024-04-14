@@ -14,7 +14,7 @@ const Calendar = ({date, setDate, setShowTimes}) => {
         </>
     }
   return (
-    <div className='grid grid-cols-7 gap-y-3 gap-x-5 mt-8 text-[13px]'>
+    <div className='grid grid-cols-7 gap-y-3 md:gap-x-5 gap-x-3 mt-8 text-[13px]'>
         {calendarDates('MON')}
         {calendarDates('TUE')}
         {calendarDates('WED')}

@@ -17,7 +17,7 @@ const MeetingModal = ({setMeet, meet, date, setDate, openModal, setModal }) => {
     }
 
     return (
-        <div className={`md:w-[64%] w-full absolute z-[100] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 my-auto h-[75%] bg-white justify-evenly rounded-md flex md:flex-row flex-col ${openModal ? 'flex' : 'hidden'}`}>
+        <div className={`md:w-[64%] w-[95%] absolute z-[100] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 my-auto h-[75%] bg-white justify-evenly rounded-md flex md:flex-row flex-col ${openModal ? 'flex' : 'hidden'}`}>
             <div className={` border-r-[0.7px] border-gray-300 ${showTimes ? 'md:basis-[35%]' : 'md:basis-[45%]'}`}>
                 <div className='w-full flex justify-center p-9 border-b-[0.7px] border-gray-300'>
                     <img className='md:h-32 h-12' src="./logo.png" alt="" />
@@ -29,7 +29,7 @@ const MeetingModal = ({setMeet, meet, date, setDate, openModal, setModal }) => {
                 </div>
             </div>
 
-            <div className={`md:flex-row flex-col md:justify-between md:py-8 md:pl-8 md:pr-8 pl-2 pr-4 ${showTimes ? 'flex basis-[70%]' : 'basis-[50%]'}`}>
+            <div className={`md:flex-row flex-col md:justify-between md:py-8 md:pl-8 md:pr-8 pr-4 ${showTimes ? 'flex basis-[70%]' : 'basis-[50%]'}`}>
                 <div className='flex flex-col basis-[55%]'>
                     <p className='font-semibold tracking-wider text-lg ml-5'>Select a Date & Time</p>
                     <div className='w-[70%] mt-7 flex ml-14 items-center justify-between'>

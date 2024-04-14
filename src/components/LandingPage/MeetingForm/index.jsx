@@ -6,7 +6,7 @@ const MeetingForm = ({setName, meet, date, openModal, setModal }) => {
 
 
     return (
-        <div className={`md:w-[68%] w-full absolute z-[100] overflow-y-scroll left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 my-auto h-[75%] bg-white rounded-md flex md:flex-row flex-col ${openModal ? 'flex' : 'hidden'}`}>
+        <div className={`md:w-[68%] w-[94%] absolute z-[100] overflow-y-scroll left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 my-auto h-[75%] bg-white rounded-md flex md:flex-row flex-col ${openModal ? 'flex' : 'hidden'}`}>
             <div className='basis-[44%] h-[210%] border-r-[0.7px] border-gray-300 relative'>
                 <div onClick={() => setModal('meetingModal')} className='absolute p-1 top-6 left-7 cursor-pointer rounded-full border border-gray-300'><RiArrowLeftLine color='blue' size={20} /></div>
                 <div className='w-full flex justify-center p-9 border-b-[0.7px] border-gray-300'>
