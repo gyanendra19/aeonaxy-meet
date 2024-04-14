@@ -3,6 +3,7 @@ import {RiCheckboxCircleFill , RiUserLine, RiEarthLine, RiVidiconLine, RiCalenda
 import calcTime from '../../../utils/calcTime'
 
 const SchedulePage = ({meet, date, name, openModal}) => {
+    
     return (
             <div className={`md:w-[64%] absolute z-[100] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 my-auto md:h-[80%] h-fit bg-white rounded-md md:flex-row flex-col w-[95%] ${openModal ? 'flex' : 'hidden'}`}>
                 <div className='md:w-1/2 w-[90%] flex flex-col items-center mx-auto py-8 h-full'>
